@@ -1,0 +1,37 @@
+1. buat project Laravel baru
+
+2. salin semua folder tambahan (timpa yang sudah ada)
+
+3. siapkan env
+
+4. siapkan database
+
+5. migrasi
+
+6. Jalankan. Jika error $icons jalankan:
+di app/Providers/AppServiceProvider.php tambahkan:
+
+use Illuminate\Support\Facades\View;
+
+public function boot()
+{
+    // Now $icons will be available in every Blade file
+    View::share('icons', [
+        'leaf' => '<svg>...</svg>',
+        'logo' => '<svg>...</svg>',
+		'home' => '<svg>...</svg>',
+		'book' => '<svg>...</svg>',
+		'flask' => '<svg>...</svg>',
+		'logout' => '<svg>...</svg>',
+		'check' => '<svg>...</svg>',
+		'arrowLeft' => '<svg>...</svg>',
+		'clock' => '<svg>...</svg>',
+    ]);
+}
+
+7. Perbaiki model materiprogress dan praktikumprogress dengan menambahkan 
+protected $table = 'materi_progresses';
+protected $table = 'praktikum_progresses';
+
+8. 
+
