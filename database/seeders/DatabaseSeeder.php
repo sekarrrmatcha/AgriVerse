@@ -17,8 +17,6 @@ class DatabaseSeeder extends Seeder
             ProdiSeeder::class,
             SemesterSeeder::class,
             MatakuliahSeeder::class,
-            MatakuliahRegulerSeeder::class,
-            MateriSeeder::class,
             PraktikumSeeder::class,
 
             // Konten tambahan per-semester (Materi & Praktikum) per prodi.
@@ -33,6 +31,12 @@ class DatabaseSeeder extends Seeder
             ThpSemester3KontenSeeder::class,
             ThpSemester4KontenSeeder::class,
             TipSemester2KontenSeeder::class,
+
+            // CATATAN: MatakuliahRegulerSeeder & MateriSeeder SENGAJA tidak
+            // dipanggil lagi. Keduanya adalah dataset "reguler" versi lama
+            // (mata kuliah kode THP101-301, TPB101-301, TIP101-301) yang
+            // tidak lagi dipakai, dan sebelumnya membuat jumlah mata kuliah
+            // & materi di setiap prodi jadi kelebihan +5 dari yang seharusnya.
         ]);
 
         // Akun demo agar langsung bisa login & tes Dashboard tanpa daftar dulu.
