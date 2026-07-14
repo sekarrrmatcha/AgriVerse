@@ -16,17 +16,22 @@ class SemesterSeeder extends Seeder
 {
     public function run(): void
     {
-        $prodiKodeList = ['THP', 'TEP', 'TIP'];
+        // Peta kode prodi (sesuai ProdiSeeder) ke prefix slug yang sudah
+        // dipakai lebih dulu pada slug matakuliah (mis. 'tep-s1-kimia').
+        // Prodi TPB (Teknik Pertanian) memakai prefix slug 'tep'.
+        $prodiSlugPrefixMap = [
+            'THP' => 'thp',
+            'TPB' => 'tep',
+            'TIP' => 'tip',
+        ];
 
-        foreach ($prodiKodeList as $kodeProdi) {
+        foreach ($prodiSlugPrefixMap as $kodeProdi => $prefix) {
             $prodi = Prodi::where('kode', $kodeProdi)->first();
 
             if (! $prodi) {
                 $this->command?->warn("Prodi dengan kode {$kodeProdi} tidak ditemukan, dilewati.");
                 continue;
             }
-
-            $prefix = strtolower($kodeProdi);
 
             for ($nomor = 1; $nomor <= 4; $nomor++) {
                 Semester::updateOrCreate(
