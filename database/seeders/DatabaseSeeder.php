@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             ProdiSeeder::class,
             SemesterSeeder::class,
             MatakuliahSeeder::class,
+            MatakuliahRegulerSeeder::class,
             MateriSeeder::class,
             PraktikumSeeder::class,
         ]);
