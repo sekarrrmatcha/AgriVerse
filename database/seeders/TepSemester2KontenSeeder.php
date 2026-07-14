@@ -80,6 +80,7 @@ class TepSemester2KontenSeeder extends Seeder
                     'pertemuan_ke' => $nomor,
                     'judul' => 'Objek '.$nomor.': '.$objek['judul'],
                     'capaian' => $objek['tujuan'],
+                    'pokok_bahasan' => [],
                     'pendahuluan' => $objek['pendahuluan'],
                     'tinjauan_pustaka' => $objek['tinjauan_pustaka'],
                 ]
