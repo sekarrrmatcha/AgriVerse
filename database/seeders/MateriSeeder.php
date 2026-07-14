@@ -239,6 +239,7 @@ class MateriSeeder extends Seeder
                         'matakuliah_id' => $matakuliah->id,
                         'pertemuan_ke' => 1,
                         'judul' => $item['judul'],
+                        'pokok_bahasan' => array_column($item['tinjauan_pustaka'], 'judul'),
                         'capaian' => $item['capaian'],
                         'pendahuluan' => $item['pendahuluan'],
                         'tinjauan_pustaka' => $item['tinjauan_pustaka'],
