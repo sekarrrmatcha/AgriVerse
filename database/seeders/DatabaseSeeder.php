@@ -20,6 +20,19 @@ class DatabaseSeeder extends Seeder
             MatakuliahRegulerSeeder::class,
             MateriSeeder::class,
             PraktikumSeeder::class,
+
+            // Konten tambahan per-semester (Materi & Praktikum) per prodi.
+            // Sebelumnya file-file ini sudah dibuat tapi belum didaftarkan
+            // di sini, sehingga tidak ikut ter-seed di environment baru
+            // (mis. Railway) walaupun sudah ada di database lokal.
+            TepSemester1KontenSeeder::class,
+            TepSemester2KontenSeeder::class,
+            TepSemester3KontenSeeder::class,
+            TepSemester4KontenSeeder::class,
+            ThpSemester2KontenSeeder::class,
+            ThpSemester3KontenSeeder::class,
+            ThpSemester4KontenSeeder::class,
+            TipSemester2KontenSeeder::class,
         ]);
 
         // Akun demo agar langsung bisa login & tes Dashboard tanpa daftar dulu.
