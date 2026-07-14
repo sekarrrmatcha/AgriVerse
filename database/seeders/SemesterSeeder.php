@@ -21,7 +21,7 @@ class SemesterSeeder extends Seeder
         // Prodi TPB (Teknik Pertanian) memakai prefix slug 'tep'.
         $prodiSlugPrefixMap = [
             'THP' => 'thp',
-            'TPB' => 'tep',
+            'TEP' => 'tep',
             'TIP' => 'tip',
         ];
 

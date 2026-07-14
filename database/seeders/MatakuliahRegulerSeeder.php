@@ -25,7 +25,7 @@ class MatakuliahRegulerSeeder extends Seeder
         // Semester, mengikuti konvensi yang sudah dipakai di SemesterSeeder.
         $prefixByProdiKode = [
             'THP' => 'thp',
-            'TPB' => 'tep',
+            'TEP' => 'tep',
             'TIP' => 'tip',
         ];
 
@@ -75,7 +75,7 @@ class MatakuliahRegulerSeeder extends Seeder
                 'THP202' => ['judul' => 'Fermentasi dan Bioproses Pangan'],
                 'THP301' => ['judul' => 'Keamanan Pangan dan Sanitasi'],
             ],
-            'TPB' => [
+            'TEP' => [
                 'TPB101' => ['judul' => 'Mekanisasi dan Alat Mesin Pertanian'],
                 'TPB102' => ['judul' => 'Teknik Irigasi dan Drainase'],
                 'TPB201' => ['judul' => 'Instrumentasi dan Kontrol Otomatis'],

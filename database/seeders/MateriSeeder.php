@@ -86,7 +86,7 @@ class MateriSeeder extends Seeder
                     ],
                 ],
             ],
-            'TPB' => [
+            'TEP' => [
                 'TPB101' => [
                     'judul' => 'Mekanisasi dan Alat Mesin Pertanian',
                     'capaian' => [

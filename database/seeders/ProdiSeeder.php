@@ -19,7 +19,7 @@ class ProdiSeeder extends Seeder
                 'deskripsi' => 'Pengolahan, pengawasan mutu, dan keamanan produk pangan hasil pertanian.',
             ],
             [
-                'kode' => 'TPB',
+                'kode' => 'TEP',
                 'nama' => 'Teknik Pertanian',
                 'slug' => 'teknik-pertanian',
                 'plot_label' => 'Blok B',
