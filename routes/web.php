@@ -47,3 +47,13 @@ Route::middleware('auth')->group(function () {
         Route::post('/praktikum/{praktikum}/toggle', [PraktikumController::class, 'toggle'])->name('praktikum.toggle');
     });
 });
+Route::get('/debug', function () {
+    return [
+        'app_url' => config('app.url'),
+        'url' => url('/login'),
+        'route' => route('login'),
+        'secure' => request()->isSecure(),
+        'scheme' => request()->getScheme(),
+        'x_forwarded_proto' => request()->header('X-Forwarded-Proto'),
+    ];
+});
