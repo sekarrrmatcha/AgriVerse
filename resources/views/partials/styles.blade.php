@@ -37,8 +37,59 @@
   .sidebar__user-avatar{width:32px;height:32px;border-radius:50%;background:var(--c-marigold);color:#3a2a0d;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:700;font-size:.8rem;flex-shrink:0;}
   .sidebar__user-name{font-size:.82rem;font-weight:600;line-height:1.2;}
   .sidebar__user-nim{font-family:var(--font-mono);font-size:.65rem;color:#a9a690;}
-  .sidebar__logout{width:100%;background:transparent;border:1px solid rgba(255,255,255,.15);color:#e7e3d3;padding:8px 10px;border-radius:var(--radius-sm);font-size:.78rem;display:flex;align-items:center;justify-content:center;gap:6px;}
-  .sidebar__logout:hover{background:rgba(255,255,255,.08);}
+.sidebar__logout {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: #e7e3d3;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.sidebar__logout:hover {
+    background: rgba(255,255,255,.08);
+}
+
+.sidebar__logout svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .sidebar__logout {
+        padding: 9px 12px;
+        font-size: .85rem;
+        gap: 6px;
+    }
+
+    .sidebar__logout svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+    .sidebar__logout {
+        padding: 8px 10px;
+        font-size: .8rem;
+        border-radius: 8px;
+    }
+
+    .sidebar__logout svg {
+        width: 15px;
+        height: 15px;
+    }
+}
 
   .main{flex:1;min-width:0;display:flex;flex-direction:column;}
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;border-bottom:1px solid var(--c-border);background:var(--c-paper);position:sticky;top:0;z-index:5;}

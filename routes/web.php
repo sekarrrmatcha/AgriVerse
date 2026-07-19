@@ -7,7 +7,9 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MatakuliahController;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\PraktikumController;
+use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\SemesterController;
+use App\Http\Controllers\ThreadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +36,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/forum', [ThreadController::class, 'index'])->name('forum.index');
+    Route::get('/forum/create', [ThreadController::class, 'create'])->name('forum.create');
+    Route::post('/forum', [ThreadController::class, 'store'])->name('forum.store');
+    Route::get('/forum/{thread}', [ThreadController::class, 'show'])->name('forum.show');
+    Route::post('/forum/{thread}/reply', [ReplyController::class, 'store'])->name('forum.reply');
 
     Route::middleware('user.prodi')->group(function () {
         Route::get('/semester/{semester}', [SemesterController::class, 'show'])->name('semester.show');

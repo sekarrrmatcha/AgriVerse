@@ -65,6 +65,11 @@ class User extends Authenticatable
         return $this->hasMany(PraktikumProgress::class);
     }
 
+    public function threads(): HasMany
+    {
+        return $this->hasMany(Thread::class);
+    }
+
     /**
      * Persentase progres belajar (materi + praktikum) untuk prodi user.
      */
